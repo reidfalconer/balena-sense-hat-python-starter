@@ -2,6 +2,7 @@ from sense_hat import SenseHat
 import time
 from weather import Weather, Unit
 import datetime
+from random import choice
 
 sense = SenseHat()
 
@@ -36,7 +37,7 @@ while True:
          sense.show_message(choice(replies))
          else:
              sense.clear()
-             
+
     for event in sense.stick.get_events():
         sense.show_message(y + " Degrees")
         sense.show_message(x)
