@@ -1,5 +1,6 @@
 from sense_hat import SenseHat
 import time
+from weather import Weather, Unit
 
 sense = SenseHat()
 
@@ -65,6 +66,12 @@ while True:
     hour = time.localtime().tm_hour + 2
     minute = time.localtime().tm_min
 
+    weather = Weather(unit=Unit.CELSIUS)
+    location = weather.lookup_by_location('barcelona')
+    condition = location.condition
+    x = str(condition.text)
+    y = str(condition.temp)
+
     # Map digits to the clock_image array
     pixel_offset = 0
     index = 0
@@ -93,3 +100,7 @@ while True:
     sense.low_light = True # Optional
     sense.set_pixels(clock_image)
     time.sleep(1)
+
+    for event in sense.stick.get_events():
+        sense.show_message(y + " Degrees")
+        sense.show_message(x)
