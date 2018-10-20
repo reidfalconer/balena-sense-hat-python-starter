@@ -62,7 +62,7 @@ clock_image = [
 ]
 
 while True:
-    hour = time.localtime().tm_hour
+    hour = time.localtime().tm_hour + 2
     minute = time.localtime().tm_min
 
     # Map digits to the clock_image array
