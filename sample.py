@@ -9,11 +9,11 @@ while True:
     condition = location.condition
     x = str(condition.text)
     y = str(condition.temp)
-    sense.load_image("img/balena.png")
-    time.sleep(3)
+# sense.load_image("img/balena.png")
+# time.sleep(3)
     sense.show_message(x)
     time.sleep(3)
-    sense.show_message(y)
+    sense.show_message(y + " Degrees")
     sense.clear()
 
 
