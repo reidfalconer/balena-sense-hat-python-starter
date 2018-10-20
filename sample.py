@@ -3,6 +3,7 @@ import time
 from weather import Weather, Unit
 
 sense = SenseHat()
+sense.set_rotation(270)
 
 number = [
 0,1,1,1, # Zero
