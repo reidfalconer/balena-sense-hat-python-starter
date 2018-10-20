@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -yq \
   wget && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
 
+RUN pip install weather-api
+
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
