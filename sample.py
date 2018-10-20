@@ -17,8 +17,11 @@ while True:
 
     sense.load_image("img/balena.png")
     time.sleep(2)
-    sense.show_message("Dominic es un coño")
+    sense.show_message("Dominic es un cono")
     time.sleep(2)
+    sense.show_message("Dominic es la perra de Reid")
+    time.sleep(2)
+
 
     for event in sense.stick.get_events():
         sense.show_message(y + " Degrees")
