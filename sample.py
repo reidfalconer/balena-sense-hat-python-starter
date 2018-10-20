@@ -7,9 +7,7 @@ from time import sleep
 
 
 sense = SenseHat()
-
 sense.show_message("Ask a question", scroll_speed=0.06)
-sleep(3)
 
 replies = ['Signs point to yes',
         'Without a doubt',
@@ -22,8 +20,6 @@ replies = ['Signs point to yes',
         ]
 
 while True:
-
-
     x, y, z = sense.get_accelerometer_raw().values()
 
     x = abs(x)
@@ -35,15 +31,15 @@ while True:
     else:
         sense.clear()
 
-    weather = Weather(unit=Unit.CELSIUS)
-    location = weather.lookup_by_location('barcelona')
-    condition = location.condition
-    x = str(condition.text)
-    y = str(condition.temp)
+ #   weather = Weather(unit=Unit.CELSIUS)
+#    location = weather.lookup_by_location('barcelona')
+#    condition = location.condition
+#    x = str(condition.text)
+ #   y = str(condition.temp)
 
     #sense.load_image("img/balena.png")
 
-    for event in sense.stick.get_events():
-        sense.show_message(y + " Degrees")
-        sense.show_message(x)
+#    for event in sense.stick.get_events():
+ #       sense.show_message(y + " Degrees")
+ #       sense.show_message(x)
 
