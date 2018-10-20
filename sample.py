@@ -2,6 +2,9 @@ from sense_hat import SenseHat
 import time
 from weather import Weather, Unit
 import datetime
+from random import choice
+from time import sleep
+
 
 sense = SenseHat()
 
