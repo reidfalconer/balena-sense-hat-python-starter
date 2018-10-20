@@ -1,6 +1,7 @@
 from sense_hat import SenseHat
 import time
 from weather import Weather, Unit
+import datetime
 
 sense = SenseHat()
 while True:
@@ -10,13 +11,12 @@ while True:
     condition = location.condition
     x = str(condition.text)
     y = str(condition.temp)
-    
+
     sense.load_image("img/balena.png")
-    time.sleep(3)
-    
+
     for event in sense.stick.get_events():
         sense.show_message(y + " Degrees")
-        
+        sense.show_message(x)
 
 
 
