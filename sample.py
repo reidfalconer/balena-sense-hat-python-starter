@@ -17,7 +17,7 @@ while True:
 
     sense.load_image("img/balena.png")
     time.sleep(2)
-    sense.show_message("I'm always free :)")
+    sense.show_message("Dominic es un coño")
     time.sleep(2)
 
     for event in sense.stick.get_events():
