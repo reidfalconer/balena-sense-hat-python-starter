@@ -6,6 +6,6 @@ sense = SenseHat()
 while True:
     sense.load_image("img/balena.png")
     time.sleep(3)
-    sense.show_message("FELIX IS A PAISANO")
+    sense.show_message("DOM WALSH IS A PAISANO")
     time.sleep(3)
     sense.clear()
