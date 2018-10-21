@@ -100,10 +100,11 @@ while True:
     # Display the time
     sense.low_light = True # Optional
 
-    if hour == 21 and minute == 58:
-            sense.load_image("img/balena.png")
-            else:
-                sense.set_pixels(clock_image)
+    if hour == 22 and minute == 8:
+        sense.load_image("img/balena.png")
+    else:
+        sense.set_pixels(clock_image)
+    
     time.sleep(1)
 
     for event in sense.stick.get_events():
