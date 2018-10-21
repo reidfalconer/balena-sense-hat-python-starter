@@ -100,9 +100,9 @@ while True:
     # Display the time
     sense.low_light = True # Optional
 
-    if hour == 22 and minute == 28:
+    if hour == 22 and minute == 35:
         sense.load_image("img/balena.png")
-        time.sleep(25)
+        time.sleep(30)
         sense.show_message("4:20 Blaze it")
     else:
         sense.set_pixels(clock_image)
