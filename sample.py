@@ -105,4 +105,4 @@ while True:
     for event in sense.stick.get_events():
         #sense.show_message(y + " Degrees")
         #sense.show_message(x)
-        sense.show_message("Where's the Ben Jerry's?")
+        sense.show_message("Where's the Ben and Jerry's?")
